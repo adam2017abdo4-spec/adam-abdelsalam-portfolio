@@ -3,224 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Adam Abdelsalam portfolio" />
-    <title>Adam Abdelsalam</title>
+    <meta
+      name="description"
+      content="Adam Abdelsalam — student portfolio featuring technology, digital design, innovation, and project work."
+    />
+    <title>Adam Abdelsalam | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        --bg: #536a72;
-        --bg-2: #4b616a;
-        --text: rgba(17, 24, 28, 0.92);
-        --muted: rgba(17, 24, 28, 0.74);
-        --line: rgba(17, 24, 28, 0.12);
-        --lime: #d8ef59;
-      }
-
-      * { box-sizing: border-box; }
-      html, body { margin: 0; min-height: 100%; }
-      body {
-        background: var(--bg);
-        color: var(--text);
-        font-family: "Inter", sans-serif;
-      }
-
-      .page {
-        width: 100%;
-        min-height: 100vh;
-        padding: 18px 0 30px;
-      }
-
-      .wrap {
-        width: min(1280px, calc(100% - 48px));
-        margin: 0 auto;
-      }
-
-      .topbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 0 18px;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-        color: var(--text);
-      }
-
-      .brand-mark {
-        width: 30px;
-        height: 30px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid rgba(17, 24, 28, 0.9);
-        border-radius: 8px;
-        font-size: 20px;
-        font-family: "Cormorant Garamond", serif;
-        font-weight: 700;
-      }
-
-      .brand-name {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 23px;
-        letter-spacing: -0.04em;
-        font-weight: 600;
-      }
-
-      .brand-dot { color: var(--lime); }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-      }
-
-      .nav a {
-        text-decoration: none;
-        color: rgba(17, 24, 28, 0.84);
-        font-size: 14px;
-        font-weight: 500;
-      }
-
-      .hero {
-        padding-top: 18px;
-      }
-
-      .status {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin: 0 0 18px;
-        font-size: 12px;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        color: rgba(17, 24, 28, 0.86);
-        font-weight: 700;
-      }
-
-      .status::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--lime);
-        display: inline-block;
-        box-shadow: 0 0 0 2px rgba(216, 239, 89, 0.25);
-      }
-
-      .headline {
-        margin: 0;
-        font-family: "Cormorant Garamond", serif;
-        font-weight: 500;
-        letter-spacing: -0.07em;
-        line-height: 0.76;
-        font-size: clamp(4.2rem, 7vw, 11rem);
-        color: rgba(17, 24, 28, 0.95);
-      }
-
-      .headline span {
-        display: block;
-      }
-
-      .intro {
-        margin-top: 26px;
-        max-width: 920px;
-        font-size: 19px;
-        line-height: 1.45;
-        color: rgba(17, 24, 28, 0.82);
-      }
-
-      .cta-row {
-        display: flex;
-        align-items: center;
-        gap: 22px;
-        flex-wrap: wrap;
-        margin-top: 18px;
-      }
-
-      .cta-link {
-        color: rgba(17, 24, 28, 0.9);
-        text-decoration: none;
-        font-size: 17px;
-        font-weight: 700;
-      }
-
-      .mini-meta {
-        margin-top: 22px;
-        font-size: 17px;
-        color: rgba(17, 24, 28, 0.8);
-      }
-
-      .mini-meta strong {
-        font-weight: 700;
-      }
-
-      .idea-tag {
-        margin-top: 18px;
-        font-size: 11px;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: rgba(17, 24, 28, 0.72);
-      }
-
-      .idea-tag .dot {
-        margin: 0 10px;
-        color: var(--lime);
-      }
-
-      .tag-cloud {
-        margin-top: 18px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 18px 18px;
-        font-size: 17px;
-        color: rgba(17, 24, 28, 0.82);
-      }
-
-      .tag-cloud span {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .tag-cloud span::before {
-        content: "✦";
-        color: var(--lime);
-      }
-
-      .subhead {
-        margin-top: 88px;
-      }
-
-      .subhead .headline {
-        font-size: clamp(3.8rem, 6vw, 8rem);
-        line-height: 0.82;
-      }
-
-      .subhead-copy {
-        max-width: 980px;
-        margin-top: 22px;
-        font-size: 17px;
-        line-height: 1.6;
-        color: rgba(17, 24, 28, 0.8);
-      }
-
-      @media (max-width: 900px) {
-        .wrap { width: min(100% - 20px, 1280px); }
-        .nav { display: none; }
-        .headline { font-size: clamp(3.2rem, 14vw, 6rem); }
-        .subhead { margin-top: 60px; }
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
   <body>
-    <div class="page">
+    <div class="page-shell">
       <header class="topbar wrap">
         <a class="brand" href="#top" aria-label="Adam home">
           <span class="brand-mark">A</span>
@@ -230,52 +28,249 @@
         <nav class="nav" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#work">Work</a>
-          <a href="#skills">Skills</a>
+          <a href="#showcase">Showcase</a>
           <a href="#connect">Connect</a>
+          <a class="auth-link" href="#auth-panel">Log In</a>
         </nav>
+
+        <div class="header-actions">
+          <a
+            class="header-button linkedin-button"
+            href="https://www.linkedin.com/in/adam-abdel-salam-3a7304329/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Adam's LinkedIn profile"
+            >LinkedIn</a
+          >
+          <a class="header-button" href="#auth-panel">Sign In</a>
+        </div>
       </header>
 
-      <main class="wrap hero">
-        <div class="status">Student creator • Doha, Qatar</div>
+      <main>
+        <section class="hero wrap" id="top">
+          <div class="status">Student creator • Doha, Qatar</div>
 
-        <h1 class="headline">
-          <span>Building ideas.</span>
-          <span>Exploring technology.</span>
-          <span>Creating for the future.</span>
-        </h1>
+          <h1 class="headline">
+            <span>Building ideas.</span>
+            <span>Exploring technology.</span>
+            <span>Creating for the future.</span>
+          </h1>
 
-        <p class="intro">
-          I'm Adam — a student interested in technology, digital design, innovation, and turning<br />curious ideas into useful things.
-        </p>
+          <p class="intro">
+            I’m Adam — a student interested in technology, digital design, innovation, and turning curious ideas into useful products and experiences.
+          </p>
 
-        <div class="cta-row">
-          <a class="cta-link" href="#work">Explore my work →</a>
-          <a class="cta-link" href="#connect">Let's connect →</a>
-        </div>
+          <div class="cta-row">
+            <a class="cta-link" href="#work">Explore my work →</a>
+            <a class="cta-link" href="#connect">Let’s connect →</a>
+          </div>
 
-        <div class="mini-meta">Currently learning <strong>Flutter • UI/UX • AI</strong></div>
+          <div class="mini-meta">Currently learning <strong>Flutter • UI/UX • AI • Mobile Apps</strong></div>
 
-        <div class="idea-tag">Ideas <span class="dot">•</span> into impact</div>
+          <div class="idea-tag">Ideas <span class="dot">•</span> into impact</div>
 
-        <div class="tag-cloud" aria-label="Skills">
-          <span>Technology</span>
-          <span>Digital Design</span>
-          <span>Innovation</span>
-          <span>Communication</span>
-        </div>
+          <div class="tag-cloud" aria-label="Skills">
+            <span>Technology</span>
+            <span>Digital Design</span>
+            <span>Innovation</span>
+            <span>Leadership</span>
+            <span>Communication</span>
+          </div>
+        </section>
 
-        <div class="subhead" id="about">
-          <h2 class="headline">
+        <section class="subhead wrap" id="about">
+          <h2 class="headline small-headline">
             <span>Turning ideas</span>
             <span>into projects.</span>
           </h2>
 
           <p class="subhead-copy">
-            I'm Adam Abdelsalam, a student at Newton International School Lagoon in Doha, Qatar, with a strong interest in technology, digital design, coding, innovation, and public speaking.
+            I’m Adam Abdelsalam, a student at Newton International School Lagoon in Doha, Qatar, with a strong interest in technology, digital design, coding, innovation, and public speaking. I enjoy learning how technology works and using it to build impactful projects, explore ideas, and solve real-world problems.
           </p>
-        </div>
+        </section>
+
+        <section class="work wrap" id="work">
+          <div class="section-heading">
+            <span class="eyebrow">My work</span>
+            <h2>Selected projects</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card feature-card">
+              <div class="project-label">UI & Prototyping</div>
+              <h3>Digital Design</h3>
+              <p>
+                Selected interface, prototype, and digital product concepts created while developing my design thinking and UX skills.
+              </p>
+              <ul class="tech-list">
+                <li>Figma</li>
+                <li>Framer</li>
+                <li>UI Design</li>
+              </ul>
+              <a href="#showcase" class="project-link">View Project</a>
+            </article>
+
+            <article class="project-card feature-card">
+              <div class="project-label">Digital Technology</div>
+              <h3>iSchool Work</h3>
+              <p>
+                Selected projects and digital technology work completed through iSchool while building practical design and tech skills.
+              </p>
+              <ul class="tech-list">
+                <li>Digital Skills</li>
+                <li>Design</li>
+                <li>Technology</li>
+              </ul>
+              <a href="#showcase" class="project-link">View Project</a>
+            </article>
+
+            <article class="project-card feature-card">
+              <div class="project-label">Innovation</div>
+              <h3>Health Technology Concept</h3>
+              <p>
+                A concept exploring how technology could make health information clearer, easier to access, and more engaging for users.
+              </p>
+              <ul class="tech-list">
+                <li>Health Tech</li>
+                <li>Research</li>
+                <li>Product Thinking</li>
+              </ul>
+              <a href="#showcase" class="project-link">View Project</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="showcase-contact wrap" id="showcase">
+          <div class="showcase-panel panel-card">
+            <div class="section-heading left-align">
+              <span class="eyebrow">Showcase</span>
+              <h2>Selected highlights</h2>
+            </div>
+
+            <div class="showcase-stack">
+              <div class="showcase-item">
+                <span class="showcase-tag">Innovation</span>
+                <h3>Problem-solving with technology</h3>
+                <p>I turn ideas into practical products, interfaces, and concepts that explore real-world impact.</p>
+              </div>
+
+              <div class="showcase-item">
+                <span class="showcase-tag">Design</span>
+                <h3>Digital product thinking</h3>
+                <p>I focus on clarity, usability, and visual quality to communicate ideas effectively.</p>
+              </div>
+
+              <div class="showcase-item">
+                <span class="showcase-tag">Leadership</span>
+                <h3>Communication and growth</h3>
+                <p>I build confidence through presentations, student leadership, and collaborative project work.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-panel panel-card" id="connect">
+            <div class="section-heading left-align">
+              <span class="eyebrow">Contact Me</span>
+              <h2>Send a message</h2>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" placeholder="Tell me about your idea or project" required></textarea>
+              </label>
+
+              <button type="submit" class="submit-button">Send Message</button>
+              <div id="contactStatus" class="status-message" aria-live="polite"></div>
+            </form>
+          </div>
+        </section>
+
+        <section class="auth wrap" id="auth-panel">
+          <div class="auth-panel panel-card">
+            <div class="section-heading left-align">
+              <span class="eyebrow">Access</span>
+              <h2>Account options</h2>
+            </div>
+
+            <div class="auth-tabs" role="tablist" aria-label="Authentication options">
+              <button class="auth-tab active" type="button" data-auth-tab="login">Log In</button>
+              <button class="auth-tab" type="button" data-auth-tab="signup">Sign Up</button>
+              <button class="auth-tab" type="button" data-auth-tab="guest">Continue as Guest</button>
+            </div>
+
+            <div id="authStatus" class="status-message" aria-live="polite"></div>
+
+            <form id="loginForm" class="auth-form active-auth-form">
+              <label>
+                <span>Email</span>
+                <input type="email" name="loginEmail" placeholder="you@example.com" required />
+              </label>
+
+              <label>
+                <span>Password</span>
+                <input type="password" name="loginPassword" placeholder="Your password" required />
+              </label>
+
+              <button type="submit" class="submit-button">Log In</button>
+            </form>
+
+            <form id="signupForm" class="auth-form">
+              <label>
+                <span>Name</span>
+                <input type="text" name="signupName" placeholder="Your full name" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" name="signupEmail" placeholder="you@example.com" required />
+              </label>
+
+              <label>
+                <span>Password</span>
+                <input type="password" name="signupPassword" placeholder="Create a secure password" required minlength="8" />
+              </label>
+
+              <div class="otp-row">
+                <input type="text" name="otpCode" placeholder="Enter verification code" aria-label="Verification code" />
+                <button type="button" class="secondary-button" id="sendOtpButton">Send Code</button>
+              </div>
+
+              <button type="submit" class="submit-button">Verify & Sign Up</button>
+            </form>
+
+            <div id="guestPanel" class="auth-form guest-form">
+              <p>Use the portfolio without creating an account. Guest access keeps things simple and doesn’t require personal details.</p>
+              <button type="button" id="guestAccessButton" class="submit-button">Continue as Guest</button>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <footer class="site-footer wrap">
+        <div class="footer-brand">
+          <span class="brand-mark">A</span>
+          <span class="brand-name">Adam<span class="brand-dot">.</span></span>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/adam-abdel-salam-3a7304329/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="#showcase">Showcase</a>
+          <a href="#connect">Contact</a>
+        </div>
+      </footer>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
-
