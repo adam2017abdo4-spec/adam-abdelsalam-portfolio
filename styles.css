@@ -1,11 +1,4 @@
-// Minimal script retained for compatibility.
-document.addEventListener('DOMContentLoaded', () => {
-  const nav = document.querySelector('.nav');
-  if (nav) {
-    nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-      });
-    });
-  }
-});
+/* Reset only for this original static version */
+html, body { margin: 0; padding: 0; }
+body { font-family: "Inter", sans-serif; }
+a { color: inherit; }
