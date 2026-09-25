@@ -1,1 +1,113 @@
-:root{--ink:#14212b;--muted:#66727b;--paper:#eef3f2;--cream:#f7f8f5;--lime:#d8f36b;--blue:#a8d9e8;--line:rgba(20,33,43,.15);--dark:#17252e}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:15px/1.6 'DM Sans',Arial,sans-serif;background:linear-gradient(135deg,#d9e4e5,#f8faf9 48%,#c7d4d5);background-attachment:fixed}body:before{content:"";position:fixed;inset:0;z-index:-2;opacity:.9;background:radial-gradient(ellipse 48% 28% at 18% 9%,rgba(255,255,255,.95),transparent 65%),radial-gradient(ellipse 55% 30% at 74% 18%,rgba(255,255,255,.82),transparent 64%),radial-gradient(ellipse 48% 32% at 60% 67%,rgba(255,255,255,.72),transparent 65%),radial-gradient(ellipse 44% 28% at 15% 87%,rgba(255,255,255,.6),transparent 68%);pointer-events:none}a{color:inherit;text-decoration:none}.section-shell,.wrap{width:min(1160px,calc(100% - 64px));margin:auto}.site-header{height:82px;width:min(1240px,calc(100% - 48px));margin:auto;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:5}.brand{display:flex;align-items:center;gap:10px;font:600 19px 'Space Grotesk',Arial,sans-serif;letter-spacing:-.04em}.brand b{height:31px;width:31px;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:15px}.brand span:last-child{color:var(--ink)}.brand>span span,.brand-dot{color:#a8c83b!important}.site-header nav{display:flex;align-items:center;gap:30px;font-size:13px;color:#52616a}.site-header nav a:hover{color:#718e12}.nav-cta{padding:10px 16px;border-radius:30px;background:var(--ink);color:white!important}.menu-toggle{display:none;border:0;background:none;font-size:23px;color:var(--ink)}.hero{min-height:680px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;padding:75px 0 100px}.hero h1,h2{font:500 clamp(45px,6vw,78px)/1.02 'Space Grotesk',Arial,sans-serif;letter-spacing:-.075em;margin:24px 0}.hero h1 i,h2 i{font-style:normal;color:#78972d}.hero h1 span,.connect h2 span{color:#accd3f}.hero p{color:var(--muted);max-width:440px;font-size:16px;margin:30px 0}.button{display:inline-block;border:0;border-radius:99px;background:var(--ink);color:#fff!important;padding:12px 18px;cursor:pointer;font-size:13px}.text-link{font-size:13px;font-weight:600;margin-left:24px}.hero-meta{border-top:1px solid var(--line);padding-top:14px;margin-top:48px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#79858a}.hero-meta strong{color:var(--ink);margin-left:25px;font-weight:500}.hero-art{height:470px;position:relative;background:linear-gradient(140deg,#c9e0e3,#9ccbd7);border-radius:50% 45% 50% 48%;overflow:hidden;transform:rotate(-4deg)}.orb{position:absolute;width:260px;height:260px;border-radius:50%;background:var(--lime);left:20%;top:25%;box-shadow:35px 25px 50px #78aeb855}.orb-two{width:145px;height:145px;background:#edaa95;left:auto;right:8%;top:8%}.hero-card{position:absolute;z-index:2;left:47px;bottom:54px;width:143px;height:170px;background:var(--ink);color:white;padding:17px;transform:rotate(7deg);display:flex;flex-direction:column;justify-content:space-between}.hero-card small{color:var(--lime)}.hero-card strong{font:500 25px/1 'Space Grotesk';letter-spacing:-.06em}.hero-card b{align-self:end;color:var(--lime)}.hero-art label{position:absolute;right:18px;top:45px;background:var(--paper);padding:10px;font-size:10px;letter-spacing:.12em;transform:rotate(8deg)}.marquee{background:var(--lime);padding:17px;text-align:center;font:500 14px 'Space Grotesk';text-transform:uppercase;letter-spacing:.08em}.split{display:grid;grid-template-columns:1fr 1fr;gap:90px}.wrap>small,.section-shell>small{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#7b878b}.wrap h2,.section-shell h2{font-size:clamp(43px,5vw,63px)}section.wrap{padding:135px 0}.split h3{font:500 24px/1.3 'Space Grotesk';letter-spacing:-.04em;margin:25px 0}.split p{color:var(--muted)}.grid{display:grid;gap:20px}.four{grid-template-columns:repeat(4,1fr);margin-top:65px}.four article{border-top:1px solid var(--line);padding:20px 0}.four article>b{font-size:25px;color:#83a527}.four h3{font:500 22px 'Space Grotesk';margin-top:55px}.four p{font-size:13px;color:var(--muted)}.heading{align-items:end;margin-bottom:65px}.heading p{max-width:330px}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:55px 24px}.projects article{background:#f4f5f0;border:1px solid rgba(20,33,43,.08)}.art{height:270px;padding:18px;font-size:10px;letter-spacing:.12em;position:relative;overflow:hidden}.art strong{position:absolute;font:600 55px 'Space Grotesk';left:25%;top:38%;transform:rotate(-25deg)}.peach{background:#e8b6a8}.blue{background:#a8d9e8}.dark{background:#202e36;color:var(--lime)}.art strong span{color:#a4c83b}.info{padding:22px 25px 25px}.info h3{font:500 28px 'Space Grotesk';margin:8px 0}.info p{font-size:13px;color:var(--muted);min-height:45px}.info em{display:block;font-style:normal;font-size:10px;color:#697277;margin:20px 0}.info a{font-weight:bold;font-size:13px}.github{background:var(--dark);color:#fff}.github .wrap{padding:75px 0}.github p{color:#acb7ba;max-width:350px}.light{background:var(--lime);color:var(--ink)!important}.highlights{margin-top:60px}.highlights p{border-top:1px solid var(--line);padding:17px 0;margin:0;font-size:13px;color:var(--muted)}.highlights strong{color:var(--ink)}.learning{padding:28px;background:rgba(235,229,216,.75)}.learning p{font:500 17px 'Space Grotesk';color:var(--ink);line-height:2}.leadership{background:rgba(168,217,232,.88);padding:120px 0}.lead-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:60px}.lead-grid span{padding:20px 0;border-top:1px solid #6f9eaa;font:500 16px 'Space Grotesk'}.add{align-items:start}.add form,.contact-form,.auth-box{background:rgba(247,248,245,.9);padding:30px;display:grid;gap:15px}label{font-size:11px;text-transform:uppercase;letter-spacing:.1em}input,textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid #c5c7bd;background:#fffefa;font:14px 'DM Sans'}textarea{height:90px;resize:vertical}.contact-section{padding:120px 0;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start;border-top:1px solid var(--line)}.contact-section h2{margin:25px 0;font-size:clamp(45px,5vw,68px)}.contact-section p{color:var(--muted);max-width:380px}.email-link{display:inline-block;margin-top:18px;font:500 15px 'Space Grotesk';border-bottom:1px solid}.contact-form textarea{height:115px}.connect{padding:120px 0;text-align:center;background:var(--lime)}.connect h2{font-size:clamp(48px,7vw,90px)}.connect p{color:#637127}.connect a{border-bottom:1px solid;font:500 15px 'Space Grotesk'}.site-footer{display:flex;justify-content:space-between;align-items:center;padding:32px 0;color:#718087;font-size:12px}.site-footer p{margin:0}.auth-modal{position:fixed;inset:0;background:rgba(20,33,43,.72);display:grid;place-items:center;padding:20px;z-index:20}.auth-modal[hidden]{display:none}.auth-box{width:min(430px,100%);position:relative}.auth-box h2{font-size:45px;margin:5px 0 20px}.close-auth{position:absolute;right:18px;top:13px;border:0;background:none;font-size:28px;cursor:pointer}.auth-tabs{display:flex;gap:20px;border-bottom:1px solid var(--line)}.auth-tabs button{border:0;background:none;padding:9px 0;cursor:pointer}.auth-tabs button.active{border-bottom:2px solid}.guest-button{background:none;border:0;text-decoration:underline;cursor:pointer}.auth-note{font-size:11px;color:var(--muted);margin:0}.reveal{opacity:0;transform:translateY(18px);transition:.7s}.reveal.visible{opacity:1;transform:none}@media(max-width:760px){.section-shell,.wrap{width:calc(100% - 40px)}.site-header{width:calc(100% - 40px);height:70px}.menu-toggle{display:block}.site-header nav{display:none;position:absolute;right:0;top:60px;background:var(--paper);padding:20px;flex-direction:column;align-items:flex-start;box-shadow:0 10px 25px #0002}.site-header nav.open{display:flex}.hero{display:block;padding:65px 0 80px;min-height:auto}.hero h1{font-size:47px}.hero-art{height:350px;margin-top:55px}.split,.contact-section{grid-template-columns:1fr;gap:35px}section.wrap{padding:90px 0}.four{grid-template-columns:1fr 1fr;gap:25px}.four h3{margin-top:30px}.projects{grid-template-columns:1fr;gap:35px}.github .wrap{padding:60px 0}.leadership{padding:90px 0}.lead-grid{grid-template-columns:1fr 1fr}.contact-section{display:block;padding:90px 0}.contact-form{margin-top:38px}.site-footer{display:block}.site-footer p{margin:20px 0 6px}}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Adam Abdelsalam portfolio" />
+    <title>Adam Abdelsalam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-row">
+          <div class="brand-mark">A</div>
+          <div class="brand-name">Adam<span class="brand-dot">.</span></div>
+        </div>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#connect">Connect</a>
+        </nav>
+
+        <button class="menu-button" aria-label="Menu"><span></span></button>
+      </header>
+
+      <main class="content-grid">
+        <section class="left-panel" aria-label="Adam profile overview">
+          <div class="status">Student creator • Doha, Qatar</div>
+
+          <h1 class="headline">
+            Building ideas.<br />
+            Exploring technology.<br />
+            Creating for the future.
+          </h1>
+
+          <p class="intro">
+            I'm Adam — a student interested in technology, digital design, innovation, and turning curious ideas into useful things.
+          </p>
+
+          <div class="cta-row">
+            <a class="cta-link" href="#work"><strong>Explore my work</strong> →</a>
+            <a class="cta-link" href="#connect">Let's connect →</a>
+          </div>
+
+          <div class="mini-meta">Currently learning <strong>Flutter • UI/UX • AI</strong></div>
+
+          <div class="idea-tag">Ideas <span class="dot">•</span> into impact</div>
+
+          <div class="tag-cloud" aria-label="Skills tags">
+            <span>Technology</span>
+            <span>Digital Design</span>
+            <span>Innovation</span>
+            <span>Communication</span>
+          </div>
+
+          <div class="sub-heading">Turning ideas<br />into projects.</div>
+
+          <p class="about-copy" id="about">
+            I'm Adam Abdelsalam, a student at Newton International School Lagoon in Doha, Qatar, with a strong interest in technology, digital design, coding, innovation, and public speaking.
+          </p>
+        </section>
+
+        <aside class="right-panel" aria-label="Member access overlay panel">
+          <div class="member-modal" role="dialog" aria-modal="true">
+            <div class="member-top">
+              <div class="member-label">Member access</div>
+              <button type="button" class="close-btn" aria-label="Close">×</button>
+            </div>
+
+            <h2 class="welcome-title">Welcome<span class="dot">.</span></h2>
+
+            <div class="auth-tabs" role="tablist" aria-label="Login or sign up switch">
+              <button type="button" class="tab-button active" data-mode="login" aria-selected="true">Log in</button>
+              <button type="button" class="tab-button" data-mode="signup" aria-selected="false">Sign up</button>
+            </div>
+
+            <form class="auth-form" id="authForm" novalidate>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+
+              <div class="field">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="••••••••" required />
+              </div>
+
+              <div class="field hidden" id="confirmField">
+                <label for="confirmPassword">Confirm password</label>
+                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Repeat password" />
+              </div>
+
+              <div class="auth-actions">
+                <button class="primary-btn" type="submit">Continue</button>
+                <button class="ghost-btn" type="button" id="guestBtn">Continue as guest</button>
+              </div>
+
+              <p id="authMessage" class="auth-message" aria-live="polite"></p>
+            </form>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
