@@ -1,4 +1,3 @@
-/* Original portfolio styling */
 :root {
   --bg: #171b1d;
   --panel: #20272a;
@@ -605,4 +604,3 @@ footer {
     min-height: 120px;
   }
 }
-
