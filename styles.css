@@ -1,113 +1,272 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Adam Abdelsalam portfolio" />
-    <title>Adam Abdelsalam</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <div class="brand-row">
-          <div class="brand-mark">A</div>
-          <div class="brand-name">Adam<span class="brand-dot">.</span></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Adam Abdelsalam — technology, innovation and digital design.">
+  <title>Adam Abdelsalam | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top"><b>A</b> Adam<span>.</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <button class="account-button" type="button" id="account-button">Log in</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy reveal">
+        <small>● STUDENT CREATOR · DOHA, QATAR</small>
+        <h1>Building ideas.<br><i>Exploring</i> technology.<br>Creating for the future<span>.</span></h1>
+        <p>I'm Adam — a student interested in technology, digital design, innovation, and turning curious ideas into useful things.</p>
+        <div class="hero-links">
+          <a href="#work">Explore my work ↗</a>
+          <a href="#contact">Let's connect ↗</a>
         </div>
+      </div>
+      <div class="hero-card reveal">
+        <div class="card-top">
+          <span class="dot"></span>
+          <small>Available for creative work</small>
+        </div>
+        <h3>Ideas with purpose.</h3>
+        <ul>
+          <li>Design thinking</li>
+          <li>Technology exploration</li>
+          <li>Digital storytelling</li>
+          <li>Innovation</li>
+        </ul>
+      </div>
+    </section>
 
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#skills">Skills</a>
-          <a href="#connect">Connect</a>
-        </nav>
+    <div class="marquee">Technology　✦　Digital Design　✦　Innovation　✦　Communication　✦　Leadership</div>
 
-        <button class="menu-button" aria-label="Menu"><span></span></button>
-      </header>
+    <section id="about" class="wrap split">
+      <div>
+        <small>01 / ABOUT ME</small>
+        <h2>Turning ideas<br><i>into projects.</i></h2>
+      </div>
+      <div>
+        <h3>I'm Adam Abdelsalam, a student at Newton International School Lagoon in Doha, Qatar, with a strong interest in technology, digital design, coding, innovation, and public speaking.</h3>
+      </div>
+    </section>
 
-      <main class="content-grid">
-        <section class="left-panel" aria-label="Adam profile overview">
-          <div class="status">Student creator • Doha, Qatar</div>
+    <section id="skills" class="wrap">
+      <small>02 / WHAT I DO</small>
+      <h2>Curiosity with<br><i>purpose.</i></h2>
+      <div class="grid four">
+        <article>
+          <b>⌘</b>
+          <h3>Technology</h3>
+          <p>Exploring coding, app ideas, and digital tools to create useful experiences.</p>
+        </article>
+        <article>
+          <b>✦</b>
+          <h3>Design</h3>
+          <p>Developing elegant visuals and user-focused interfaces with clarity and intention.</p>
+        </article>
+        <article>
+          <b>◎</b>
+          <h3>Innovation</h3>
+          <p>Combining ideas, creativity, and problem solving to build meaningful projects.</p>
+        </article>
+        <article>
+          <b>∞</b>
+          <h3>Communication</h3>
+          <p>Sharing ideas clearly, presenting with confidence, and collaborating effectively.</p>
+        </article>
+      </div>
+    </section>
 
-          <h1 class="headline">
-            Building ideas.<br />
-            Exploring technology.<br />
-            Creating for the future.
-          </h1>
+    <section id="work" class="wrap">
+      <div class="split heading">
+        <div>
+          <small>03 / SELECTED WORK</small>
+          <h2>Things I've<br><i>been building.</i></h2>
+        </div>
+        <p>A collection of digital experiments, design work, and projects that reflect curiosity, creativity, and ambition.</p>
+      </div>
 
-          <p class="intro">
-            I'm Adam — a student interested in technology, digital design, innovation, and turning curious ideas into useful things.
-          </p>
-
-          <div class="cta-row">
-            <a class="cta-link" href="#work"><strong>Explore my work</strong> →</a>
-            <a class="cta-link" href="#connect">Let's connect →</a>
+      <div class="project-list">
+        <article>
+          <div class="art peach">01 / EXPLORE<strong>UI</strong></div>
+          <div class="info">
+            <small>UI & PROTOTYPING</small>
+            <h3>Digital design</h3>
+            <p>Selected interface and prototype work created while exploring visual storytelling and product thinking.</p>
           </div>
-
-          <div class="mini-meta">Currently learning <strong>Flutter • UI/UX • AI</strong></div>
-
-          <div class="idea-tag">Ideas <span class="dot">•</span> into impact</div>
-
-          <div class="tag-cloud" aria-label="Skills tags">
-            <span>Technology</span>
-            <span>Digital Design</span>
-            <span>Innovation</span>
-            <span>Communication</span>
+        </article>
+        <article>
+          <div class="art blue">02 / LEARN<strong>i<span>S</span></strong></div>
+          <div class="info">
+            <small>DIGITAL TECHNOLOGY</small>
+            <h3>iSchool work</h3>
+            <p>Selected projects and digital work completed through school-based technology learning and experimentation.</p>
           </div>
-
-          <div class="sub-heading">Turning ideas<br />into projects.</div>
-
-          <p class="about-copy" id="about">
-            I'm Adam Abdelsalam, a student at Newton International School Lagoon in Doha, Qatar, with a strong interest in technology, digital design, coding, innovation, and public speaking.
-          </p>
-        </section>
-
-        <aside class="right-panel" aria-label="Member access overlay panel">
-          <div class="member-modal" role="dialog" aria-modal="true">
-            <div class="member-top">
-              <div class="member-label">Member access</div>
-              <button type="button" class="close-btn" aria-label="Close">×</button>
-            </div>
-
-            <h2 class="welcome-title">Welcome<span class="dot">.</span></h2>
-
-            <div class="auth-tabs" role="tablist" aria-label="Login or sign up switch">
-              <button type="button" class="tab-button active" data-mode="login" aria-selected="true">Log in</button>
-              <button type="button" class="tab-button" data-mode="signup" aria-selected="false">Sign up</button>
-            </div>
-
-            <form class="auth-form" id="authForm" novalidate>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" required />
-              </div>
-
-              <div class="field">
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password" placeholder="••••••••" required />
-              </div>
-
-              <div class="field hidden" id="confirmField">
-                <label for="confirmPassword">Confirm password</label>
-                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Repeat password" />
-              </div>
-
-              <div class="auth-actions">
-                <button class="primary-btn" type="submit">Continue</button>
-                <button class="ghost-btn" type="button" id="guestBtn">Continue as guest</button>
-              </div>
-
-              <p id="authMessage" class="auth-message" aria-live="polite"></p>
-            </form>
+        </article>
+        <article>
+          <div class="art dark">03 / BUILD<strong>✦</strong></div>
+          <div class="info">
+            <small>CREATIVE PROJECTS</small>
+            <h3>Portfolio work</h3>
+            <p>Personal website projects and creative digital builds designed to show learning, growth, and originality.</p>
           </div>
-        </aside>
-      </main>
+        </article>
+      </div>
+    </section>
+
+    <section class="github">
+      <div class="wrap split">
+        <div>
+          <small>04 / OPEN SOURCE</small>
+          <h2>My coding,<br><i>out in the world.</i></h2>
+        </div>
+        <div>
+          <p>Explore the public projects, experiments, and coding work I have shared online.</p>
+          <a href="https://github.com/adam2017abdo4-spec" target="_blank" rel="noopener">GitHub profile ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <small>05 / HIGHLIGHTS</small>
+      <h2>Learning by<br><i>doing.</i></h2>
+      <div class="split highlights">
+        <div>
+          <p>🏆 <strong>Public Speaking Trophy</strong><br>Recognition for confidence and academic communication.</p>
+        </div>
+        <div>
+          <p>🎨 <strong>Creative Digital Work</strong><br>Design and tech projects created with purpose and originality.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="leadership">
+      <div class="wrap">
+        <small>06 / LEADERSHIP</small>
+        <h2>Showing up,<br><i>speaking out.</i></h2>
+        <div class="lead-grid">
+          <span>Student leader</span>
+          <span>Student councillor</span>
+          <span>Public speaker</span>
+          <span>Creative collaborator</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="add-work" class="wrap split add">
+      <div>
+        <small>07 / KEEP BUILDING</small>
+        <h2>Have something<br><i>new to showcase?</i></h2>
+        <p>Add a project, coding work, design, or technology experiment here.</p>
+      </div>
+
+      <form id="project-form" class="project-form">
+        <label>
+          <span>Project title</span>
+          <input id="title" name="title" type="text" required />
+        </label>
+        <label>
+          <span>Description</span>
+          <textarea id="description" name="description" rows="4" required></textarea>
+        </label>
+        <label>
+          <span>Link</span>
+          <input id="link" name="link" type="url" placeholder="https://" />
+        </label>
+        <label>
+          <span>Technology</span>
+          <input id="tech" name="tech" type="text" placeholder="HTML, CSS, JS..." />
+        </label>
+        <button type="submit">Save project</button>
+        <output aria-live="polite"></output>
+      </form>
+    </section>
+
+    <section id="contact" class="wrap contact-section">
+      <div>
+        <small>08 / CONTACT ME</small>
+        <h2>Let's make<br><i>something useful.</i></h2>
+        <p>Have a question, idea, or opportunity? Send a message and I'll get back to you.</p>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <label>
+          <span>Your name</span>
+          <input id="contact-name" type="text" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input id="contact-email" type="email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea id="contact-message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+
+    <section id="connect" class="connect">
+      <div class="wrap">
+        <small>09 / LET'S CONNECT</small>
+        <h2>Want to see what<br>I'm working on<span>?</span></h2>
+        <p>Follow my journey as I continue learning, building, and exploring exciting ideas.</p>
+        <div class="socials">
+          <a href="mailto:adam2017abdo4@gmail.com">Email</a>
+          <a href="https://github.com/adam2017abdo4-spec" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <a class="brand" href="#top"><b>A</b> Adam<span>.</span></a>
+    <p>Learning today. Building tomorrow.</p>
+    <small>© <span id="year"></span> Adam Abdelsalam. All rights reserved.</small>
+  </footer>
+
+  <div class="auth-modal" id="auth-modal" hidden>
+    <div class="auth-box">
+      <button class="close-auth" aria-label="Close">×</button>
+      <small>MEMBER ACCESS</small>
+      <h2>Welcome<span>.</span></h2>
+      <div class="auth-tabs">
+        <button type="button" class="active" data-mode="login">Log in</button>
+        <button type="button" data-mode="signup">Sign up</button>
+      </div>
+      <form id="auth-form">
+        <label>
+          <span>Email</span>
+          <input id="auth-email" type="email" required />
+        </label>
+        <label id="password-label">
+          <span>Password</span>
+          <input id="auth-password" type="password" required />
+        </label>
+        <label id="code-label" hidden>
+          <span>Confirmation code</span>
+          <input id="auth-code" type="text" />
+        </label>
+        <button type="submit">Continue</button>
+        <button type="button" id="guest-button" class="secondary">Continue as guest</button>
+        <output aria-live="polite"></output>
+      </form>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
 
