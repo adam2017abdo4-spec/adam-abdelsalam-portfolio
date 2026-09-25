@@ -1,64 +1,26 @@
-const form = document.querySelector('#project-form');
-const projectGrid = document.querySelector('.project-grid');
-const message = document.querySelector('#form-message');
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.site-nav');
+const $ = (selector) => document.querySelector(selector);
+$('#year').textContent = new Date().getFullYear();
+$('.menu-toggle').addEventListener('click', () => document.querySelector('nav').classList.toggle('open'));
+const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-// Reveal sections as they enter the viewport.
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+const projectForm = $('#project-form');
+function savedProjects() { try { return JSON.parse(localStorage.getItem('adamProjects') || '[]'); } catch { return []; } }
+function safe(value) { const el = document.createElement('div'); el.textContent = value; return el.innerHTML; }
+function addProject(project) { const article = document.createElement('article'); article.innerHTML = `<div class="art dark">NEW / PROJECT<strong>✦</strong></div><div class="info"><small>PERSONAL WORK</small><h3>${safe(project.title)}</h3><p>${safe(project.description)}</p><em>${safe(project.tech || 'Project')}</em>${project.link ? `<a href="${project.link.replace(/["'<>]/g, '')}" target="_blank" rel="noopener">View project ↗</a>` : ''}</div>`; document.querySelector('.projects').append(article); }
+savedProjects().forEach(addProject);
+projectForm.addEventListener('submit', (event) => { event.preventDefault(); const project = { title: $('#title').value.trim(), description: $('#description').value.trim(), link: $('#link').value.trim(), tech: $('#tech').value.trim() }; localStorage.setItem('adamProjects', JSON.stringify([...savedProjects(), project])); addProject(project); projectForm.reset(); projectForm.querySelector('output').textContent = 'Project added in this browser.'; });
 
-// Small, subtle pointer glow on larger screens.
-const glow = document.querySelector('.cursor-glow');
-window.addEventListener('pointermove', (event) => {
-  glow.style.left = `${event.clientX}px`;
-  glow.style.top = `${event.clientY}px`;
-});
+// Contact uses the visitor's email app and addresses Adam directly.
+$('#contact-form').addEventListener('submit', (event) => { event.preventDefault(); const name = $('#contact-name').value.trim(); const email = $('#contact-email').value.trim(); const body = encodeURIComponent(`${$('#contact-message').value.trim()}\n\nFrom: ${name} (${email})`); window.location.href = `mailto:adam2017abdo4@gmail.com?subject=${encodeURIComponent(`Portfolio message from ${name}`)}&body=${body}`; $('#contact-form output').textContent = 'Opening your email app…'; });
 
-menuToggle.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', open);
-});
-nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => nav.classList.remove('open')));
-document.querySelector('#year').textContent = new Date().getFullYear();
-
-function getProjects() {
-  try { return JSON.parse(localStorage.getItem('adamProjects')) || []; } catch { return []; }
-}
-function saveProjects(projects) { localStorage.setItem('adamProjects', JSON.stringify(projects)); }
-function addProjectCard(project) {
-  const card = document.createElement('article');
-  card.className = 'project-card reveal visible';
-  const tags = project.technologies.split(',').map((tag) => tag.trim()).filter(Boolean);
-  const image = project.image ? `<img src="${project.image}" alt="" style="width:100%;height:100%;object-fit:cover">` : '<div class="code-symbol">✦</div><div class="code-lines"><i></i><i></i><i></i></div>';
-  card.innerHTML = `<div class="project-visual visual-code"><span class="visual-label">New / Project</span>${image}</div><div class="project-info"><p class="project-type">Personal work</p><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.description)}</p><div class="tag-list">${tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('')}</div>${project.link ? `<a class="project-link" href="${escapeAttribute(project.link)}" target="_blank" rel="noopener">View project <span>↗</span></a>` : ''}</div>`;
-  projectGrid.appendChild(card);
-}
-function escapeHtml(value) { const div = document.createElement('div'); div.textContent = value; return div.innerHTML; }
-function escapeAttribute(value) { return value.replace(/["'<>]/g, ''); }
-getProjects().forEach(addProjectCard);
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const project = {
-    title: document.querySelector('#project-title').value.trim(),
-    description: document.querySelector('#project-description').value.trim(),
-    link: document.querySelector('#project-link').value.trim(),
-    image: document.querySelector('#project-image').value.trim(),
-    technologies: document.querySelector('#project-tech').value.trim()
-  };
-  const projects = getProjects();
-  projects.push(project);
-  saveProjects(projects);
-  addProjectCard(project);
-  form.reset();
-  message.textContent = 'Project added to your portfolio in this browser.';
-  setTimeout(() => { message.textContent = ''; }, 5000);
-});
+// Front-end access dialog. Real password storage and email verification must be handled server-side.
+const modal = $('#auth-modal');
+function openAuth(mode = 'login') { modal.hidden = false; setMode(mode); }
+function setMode(mode) { document.querySelectorAll('.auth-tabs button').forEach((button) => button.classList.toggle('active', button.dataset.mode === mode)); $('#password-label').hidden = mode === 'signup'; $('#code-label').hidden = mode !== 'signup'; $('#auth-form output').textContent = mode === 'signup' ? 'A real verification email requires a backend email provider.' : ''; }
+$('.close-auth').addEventListener('click', () => { modal.hidden = true; });
+document.querySelectorAll('.auth-tabs button').forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode)));
+$('#guest-button').addEventListener('click', () => { modal.hidden = true; localStorage.setItem('adamGuest', 'true'); });
+$('#auth-form').addEventListener('submit', (event) => { event.preventDefault(); const signup = !$('#code-label').hidden; $('#auth-form output').textContent = signup ? 'Demo only: connect a backend to send the verification code.' : 'Demo only: connect authentication before accepting accounts.'; });
+// Optional trigger for a future account button.
+window.openPortfolioLogin = openAuth;
