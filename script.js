@@ -1,606 +1,290 @@
-:root {
-  --bg: #171b1d;
-  --panel: #20272a;
-  --panel-soft: #1a1f22;
-  --panel-2: #111517;
-  --text: #edf0ee;
-  --muted: #b9c2be;
-  --line: rgba(255,255,255,0.08);
-  --lime: #d5f35f;
-  --peach: #f1d4b5;
-  --blue: #bfe3ff;
-  --shadow: rgba(0,0,0,0.25);
-}
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: "DM Sans", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
-}
-
-a { color: inherit; text-decoration: none; }
-button, input, textarea { font: inherit; }
-
-.wrap {
-  width: min(1180px, calc(100% - 48px));
-  margin: 0 auto;
-}
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: min(1380px, calc(100% - 20px));
-  margin: 10px auto 0;
-  padding: 16px 18px;
-  background: rgba(20, 25, 27, 0.9);
-  border: 1px solid var(--line);
-  backdrop-filter: blur(10px);
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.brand b {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border: 1px solid rgba(255,255,255,.3);
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.brand span { color: var(--lime); }
-
-.site-header nav {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  font-size: 0.9rem;
-}
-
-.site-header nav a {
-  opacity: 0.82;
-}
-
-.account-button {
-  border: 1px solid rgba(255,255,255,0.18);
-  background: transparent;
-  color: var(--text);
-  border-radius: 999px;
-  padding: 9px 18px;
-  cursor: pointer;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-.hero {
-  display: grid;
-  grid-template-columns: 1.5fr 0.9fr;
-  gap: 42px;
-  padding: 80px 0 40px;
-  align-items: end;
-}
-
-.hero-copy small,
-section small,
-.connect small,
-.contact-section small {
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-size: 0.7rem;
-}
-
-h1, h2, h3 { font-family: "Space Grotesk", sans-serif; }
-
-.hero-copy h1 {
-  margin: 20px 0 16px;
-  font-size: clamp(3.1rem, 6vw, 7rem);
-  line-height: 0.88;
-  letter-spacing: -0.06em;
-  font-weight: 500;
-}
-
-.hero-copy h1 i,
-section h2 i,
-.contact-section h2 i,
-.connect h2 i {
-  font-style: normal;
-  color: rgba(255,255,255,.7);
-}
-
-.hero-copy h1 span,
-section h2 span,
-.connect h2 span { color: var(--lime); }
-
-.hero-copy p {
-  max-width: 640px;
-  font-size: 1.08rem;
-  color: rgba(255,255,255,0.75);
-  margin: 0;
-}
-
-.hero-links {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.hero-links a {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 12px 20px;
-  background: rgba(255,255,255,0.02);
-}
-
-.hero-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 22px 20px;
-  box-shadow: 0 20px 40px var(--shadow);
-}
-
-.card-top {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.7rem;
-}
-
-.dot {
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--lime);
-}
-
-.hero-card h3 {
-  margin: 18px 0 10px;
-  font-size: clamp(1.8rem, 2.6vw, 2.6rem);
-  font-weight: 500;
-}
-
-.hero-card ul {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--muted);
-  display: grid;
-  gap: 10px;
-}
-
-.marquee {
-  position: relative;
-  overflow: hidden;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 16px 0;
-  margin: 12px 0 40px;
-  white-space: nowrap;
-  color: rgba(255,255,255,0.8);
-  letter-spacing: 0.08em;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-}
-
-.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: start;
-}
-
-section h2 {
-  margin: 18px 0 0;
-  font-size: clamp(2.7rem, 5vw, 5rem);
-  line-height: 0.9;
-  letter-spacing: -0.06em;
-  font-weight: 500;
-}
-
-section h3 {
-  margin: 0;
-  font-size: clamp(1.4rem, 2vw, 2rem);
-  font-weight: 500;
-  color: rgba(255,255,255,0.85);
-}
-
-section p,
-#contact p,
-#connect p {
-  color: rgba(255,255,255,0.75);
-  font-size: 1.05rem;
-}
-
-.grid.four {
-  margin-top: 32px;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.grid article,
-.project-list article,
-.contact-form,
-.project-form,
-.auth-box {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-}
-
-.grid article {
-  padding: 20px 18px;
-}
-
-.grid b {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid var(--line);
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-}
-
-.grid h3 {
-  margin-bottom: 12px;
-}
-
-#work, #skills, #about, #contact, #connect, #add-work {
-  padding-top: 90px;
-}
-
-.heading p { max-width: 540px; }
-
-.project-list {
-  margin-top: 32px;
-  display: grid;
-  gap: 18px;
-}
-
-.project-list article {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  min-height: 198px;
-  overflow: hidden;
-}
-
-.art {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--text);
-  padding: 24px;
-}
-
-.art strong {
-  color: rgba(255,255,255,0.88);
-}
-
-.art.peach { background: var(--peach); color: #171b1d; }
-.art.blue { background: var(--blue); color: #171b1d; }
-.art.dark { background: rgba(255,255,255,0.08); }
-
-.info {
-  padding: 26px 26px 24px;
-}
-
-.info small {
-  color: var(--muted);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-}
-
-.info h3 {
-  margin: 12px 0 12px;
-}
-
-.github {
-  margin-top: 90px;
-  padding: 24px 0 0;
-  border-top: 1px solid var(--line);
-}
-
-.github a {
-  display: inline-block;
-  margin-top: 16px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 12px 18px;
-}
-
-.highlights {
-  margin-top: 28px;
-}
-
-.leadership {
-  margin-top: 76px;
-  padding: 30px 0 0;
-  border-top: 1px solid var(--line);
-}
-
-.lead-grid {
-  margin-top: 26px;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.lead-grid span {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 18px 14px;
-  text-align: center;
-  color: rgba(255,255,255,0.8);
-}
-
-.add {
-  align-items: center;
-}
-
-.project-form,
-.contact-form {
-  padding: 18px;
-}
-
-.project-form,
-.contact-form {
-  display: grid;
-  gap: 14px;
-}
-
-.project-form label,
-.contact-form label,
-#auth-form label {
-  display: grid;
-  gap: 7px;
-  color: rgba(255,255,255,0.8);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.project-form input,
-.project-form textarea,
-.contact-form input,
-.contact-form textarea,
-#auth-form input {
-  width: 100%;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 12px 14px;
-  color: var(--text);
-  font-size: 1rem;
-}
-
-.project-form button,
-.contact-form button,
-#auth-form button {
-  appearance: none;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,0.05);
-  color: var(--text);
-  border-radius: 12px;
-  padding: 13px 18px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-#auth-form button.secondary {
-  background: transparent;
-}
-
-output {
-  min-height: 20px;
-  color: rgba(255,255,255,0.7);
-  font-size: 0.8rem;
-}
-
-.contact-section h2 {
-  margin-top: 18px;
-}
-
-.connect {
-  padding: 90px 0 120px;
-}
-
-.socials {
-  margin-top: 22px;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.socials a {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 11px 18px;
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 26px 0 64px;
-  border-top: 1px solid var(--line);
-  color: rgba(255,255,255,0.72);
-}
-
-.auth-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(7,10,11,0.68);
-  display: grid;
-  place-items: center;
-  z-index: 100;
-}
-
-.auth-box {
-  position: relative;
-  width: min(560px, calc(100% - 32px));
-  padding: 30px 26px 22px;
-  background: rgba(15, 18, 19, 0.95);
-}
-
-.close-auth {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  border: 0;
-  background: transparent;
-  color: rgba(255,255,255,.8);
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.auth-box small {
-  color: rgba(255,255,255,0.7);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.auth-box h2 {
-  margin: 12px 0 18px;
-  font-size: clamp(2.8rem, 4vw, 4.4rem);
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-}
-
-.auth-tabs {
-  display: flex;
-  gap: 18px;
-  border-bottom: 1px solid var(--line);
-  margin-bottom: 18px;
-}
-
-.auth-tabs button {
-  border: 0;
-  background: transparent;
-  color: rgba(255,255,255,0.7);
-  padding: 10px 0 12px;
-  cursor: pointer;
-}
-
-.auth-tabs button.active {
-  color: var(--text);
-  border-bottom: 2px solid rgba(255,255,255,0.8);
-}
-
-#auth-form {
-  display: grid;
-  gap: 14px;
-}
-
-#auth-form label {
-  display: grid;
-  gap: 9px;
-}
-
-#auth-form output {
-  display: block;
-  margin-top: 4px;
-  min-height: 18px;
-  color: rgba(255,255,255,.75);
-}
-
-[hidden] { display: none !important; }
-
-@media (max-width: 900px) {
-  .hero,
-  .split,
-  .project-list article,
-  .grid.four,
-  .lead-grid,
-  footer {
-    grid-template-columns: 1fr;
-    display: grid;
-  }
-
-  .site-header nav {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-    background: transparent;
-    border: 1px solid var(--line);
-    color: var(--text);
-    border-radius: 8px;
-    padding: 8px 10px;
-  }
-
-  .site-header {
-    width: min(100% - 16px, 1380px);
-  }
-
-  .hero {
-    padding-top: 44px;
-  }
-
-  .grid.four,
-  .lead-grid {
-    display: grid;
-    gap: 16px;
-  }
-}
-
-@media (max-width: 640px) {
-  .wrap {
-    width: min(100% - 24px, 1180px);
-  }
-
-  .site-header {
-    padding: 12px 14px;
-  }
-
-  .hero-copy h1 {
-    font-size: 3rem;
-  }
-
-  section h2 {
-    font-size: 2.7rem;
-  }
-
-  .project-list article {
-    grid-template-columns: 1fr;
-  }
-
-  .art {
-    min-height: 120px;
-  }
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Adam Abdelsalam — technology, innovation and digital design." />
+    <title>Adam Abdelsalam | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #546a73;
+        --bg-2: #4a5f69;
+        --text: rgba(17, 24, 28, 0.92);
+        --muted: rgba(17, 24, 28, 0.68);
+        --line: rgba(17, 24, 28, 0.12);
+        --lime: #d6ef59;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+      }
+
+      .page {
+        width: 100%;
+        min-height: 100vh;
+        padding: 18px 0 2rem;
+      }
+
+      .wrap {
+        width: min(1280px, calc(100% - 52px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0 18px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .brand-mark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border: 1.5px solid rgba(17, 24, 28, 0.9);
+        border-radius: 8px;
+        font-size: 18px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 700;
+        transform: translateY(-1px);
+      }
+
+      .brand-name {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 24px;
+        letter-spacing: -0.04em;
+        font-weight: 600;
+      }
+
+      .brand-dot { color: var(--lime); }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-right: 10px;
+      }
+
+      .nav a {
+        color: rgba(17, 24, 28, 0.8);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .hero {
+        padding-top: 26px;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 4px 0 14px;
+        font-size: 12px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(17, 24, 28, 0.85);
+        font-weight: 700;
+      }
+
+      .status::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        display: inline-block;
+        background: var(--lime);
+        box-shadow: 0 0 0 2px rgba(214, 239, 89, 0.22);
+      }
+
+      .headline {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(4rem, 7vw, 10rem);
+        line-height: 0.72;
+        letter-spacing: -0.065em;
+        font-weight: 500;
+        color: rgba(17, 24, 28, 0.96);
+      }
+
+      .headline span {
+        display: block;
+      }
+
+      .intro {
+        max-width: 820px;
+        margin-top: 32px;
+        font-size: 18px;
+        line-height: 1.5;
+        color: rgba(17, 24, 28, 0.84);
+      }
+
+      .cta-row {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+
+      .cta-link {
+        font-size: 18px;
+        font-weight: 700;
+        color: rgba(17, 24, 28, 0.9);
+        text-decoration: none;
+      }
+
+      .mini-meta {
+        margin-top: 28px;
+        font-size: 17px;
+        color: rgba(17, 24, 28, 0.82);
+      }
+
+      .idea-tag {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        color: rgba(17, 24, 28, 0.74);
+      }
+
+      .idea-tag .bulb {
+        color: var(--lime);
+        font-size: 14px;
+      }
+
+      .tag-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 18px;
+        font-size: 17px;
+        color: rgba(17, 24, 28, 0.85);
+      }
+
+      .tag-list span {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .tag-list span::before {
+        content: "✦";
+        color: var(--lime);
+        font-size: 14px;
+      }
+
+      .subhead {
+        margin-top: 68px;
+      }
+
+      .subhead .headline {
+        font-size: clamp(4rem, 6vw, 8rem);
+        line-height: 0.8;
+      }
+
+      .subhead-copy {
+        max-width: 920px;
+        margin-top: 22px;
+        font-size: 18px;
+        line-height: 1.5;
+        color: rgba(17, 24, 28, 0.82);
+      }
+
+      @media (max-width: 900px) {
+        .wrap { width: min(100% - 28px, 1280px); }
+        .nav { display: none; }
+        .headline { font-size: clamp(3rem, 10vw, 6rem); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header wrap">
+        <a href="#top" class="brand" aria-label="Adam home">
+          <span class="brand-mark">A</span>
+          <span class="brand-name">Adam<span class="brand-dot">.</span></span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#connect">Connect</a>
+        </nav>
+      </header>
+
+      <main class="wrap hero">
+        <section aria-label="Homepage introduction">
+          <div class="status">Student creator • Doha, Qatar</div>
+
+          <h1 class="headline">
+            <span>Building ideas.</span>
+            <span>Exploring technology.</span>
+            <span>Creating for the future.</span>
+          </h1>
+
+          <p class="intro">
+            I'm Adam — a student interested in technology, digital design, innovation, and turning curious ideas into useful things.
+          </p>
+
+          <div class="cta-row">
+            <a href="#work" class="cta-link">Explore my work →</a>
+            <a href="#contact" class="cta-link">Let's connect →</a>
+          </div>
+
+          <div class="mini-meta">Currently learning <strong>Flutter • UI/UX • AI</strong></div>
+
+          <div class="idea-tag">
+            <span>Ideas</span>
+            <span class="bulb">•</span>
+            <span>Into impact</span>
+          </div>
+
+          <div class="tag-list" aria-label="Skills">
+            <span>Technology</span>
+            <span>Digital Design</span>
+            <span>Innovation</span>
+            <span>Communication</span>
+          </div>
+        </section>
+
+        <section class="subhead" aria-label="About section preview">
+          <h2 class="headline">
+            <span>Turning ideas</span>
+            <span>into projects.</span>
+          </h2>
+
+          <p class="subhead-copy">
+            I'm Adam Abdelsalam, a student at Newton International School Lagoon in Doha, Qatar, with a strong interest in technology, digital design, coding, innovation, and public speaking.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
